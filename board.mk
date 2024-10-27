@@ -6,13 +6,13 @@ BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 
 # defines SHORT_BOARD_NAME
 include $(BOARD_DIR)/meta-info.env
-
+IS_STM32F429 = yes
 # reduce memory usage monitoring
 DDEFS += -DRAM_UNUSED_SIZE=100
 
 # assign critical LED to a non-existent pin if you do not have it on your board
 # good old PD14 is still the default value
-# DDEFS += -DLED_CRITICAL_ERROR_BRAIN_PIN=Gpio::I15
+# DDEFS += -DLED_CRITICAL_ERROR_BRAIN_PIN=Gpio::PE3
 #DDEFS += -DEFI_SENT_SUPPORT=TRUE
 
 DDEFS += -DEFI_SENSOR_CHART=FALSE
